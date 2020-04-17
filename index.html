@@ -50,15 +50,20 @@
     
     var slap = new Tone.Player({
        "retrigger" : true
+    });    
+    var borat = new Tone.Player({
+       "retrigger" : true
     });
-    
+     
     slap.load( "slap.mp3" );
-    
+    borat.load( "borat.mp3" );
     slap.connect(Tone.Master);
+    borat.connect(Tone.Master);
 
     function mouseActions(event) {
         UnmuteButton().start();
         slap.start();
+        borat.start("+0:2");
     }
     </script>
 
